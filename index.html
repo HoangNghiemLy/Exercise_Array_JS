@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Xử lý Mảng</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 p-6">
+    <div class="max-w-2xl mx-auto bg-white p-6 rounded shadow space-y-4">
+        <h1 class="text-2xl font-bold text-center text-blue-800">🧮 Hệ thống xử lý mảng</h1>
+
+        <!-- Nhập mảng chính -->
+        <div>
+            <input id="arrayInput" class="w-full border p-2 rounded" placeholder="Nhập mảng số nguyên (vd: 1,2,3)">
+            <button onclick="getArray()"
+                class="mt-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded w-full">🔢 Nhập mảng</button>
+        </div>
+
+
+
+        <!-- Các chức năng xử lý mảng -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+            <button onclick="sumPositive()" class="bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded">1. Tổng
+                số dương</button>
+            <button onclick="countPositive()" class="bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded">2.
+                Đếm số dương</button>
+            <button onclick="findMin()" class="bg-yellow-500 hover:bg-yellow-600 text-white py-2 px-4 rounded">3. Số nhỏ
+                nhất</button>
+            <button onclick="findMinPositive()"
+                class="bg-yellow-500 hover:bg-yellow-600 text-white py-2 px-4 rounded">4. Dương nhỏ nhất</button>
+            <button onclick="findLastEven()" class="bg-indigo-500 hover:bg-indigo-600 text-white py-2 px-4 rounded">5.
+                Số chẵn cuối</button>
+            <button onclick="sortArray()" class="bg-purple-500 hover:bg-purple-600 text-white py-2 px-4 rounded">7. Sắp
+                xếp tăng</button>
+            <button onclick="findFirstPrime()" class="bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded">8.
+                Nguyên tố đầu</button>
+            <button onclick="comparePosNeg()" class="bg-gray-800 hover:bg-gray-900 text-white py-2 px-4 rounded">10. So
+                sánh dương/âm</button>
+        </div>
+
+        <!-- Đổi chỗ -->
+        <div class="flex gap-2">
+            <input id="pos1" class="border p-2 rounded w-1/2" placeholder="Vị trí 1">
+            <input id="pos2" class="border p-2 rounded w-1/2" placeholder="Vị trí 2">
+        </div>
+        <button onclick="swapElements()"
+            class="mt-1 bg-pink-500 hover:bg-pink-600 text-white py-2 px-4 rounded w-full">6. Đổi chỗ</button>
+
+        <!-- Nhập số thực -->
+        <div class="mt-4">
+            <input id="realArrayInput" class="w-full border p-2 rounded" placeholder="Nhập mảng số thực (vd: 1.5,2.1)">
+            <button onclick="updateWithRealNumbers()"
+                class="mt-2 bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded w-full">📥 Cập nhật mảng</button>
+            <button onclick="countIntegers()"
+                class="mt-2 bg-purple-500 hover:bg-purple-600 text-white py-2 px-4 rounded w-full">9. Đếm số
+                nguyên</button>
+        </div>
+
+        <!-- Kết quả -->
+        <div id="output" class="p-4 bg-gray-200 border rounded text-green-800 font-semibold text-center"></div>
+        <!-- Hiển thị mảng -->
+        <div id="arrayDisplay" class="text-blue-700 font-semibold">📌 Mảng hiện tại: []</div>
+    </div>
+    <script src="./src/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</body>
+
+</html>
